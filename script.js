@@ -13,3 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
         .attr('class', 'data-point')
         .text(d => d)  // Display the data point value in the div
         .on('mouseover', function() {
+            // Change background color on hover
+            d3.select(this).style('background-color', 'firebrick');
+         })
+        .on('mouseout', function() {
+             // Revert background color when mouse leaves
+            d3.select(this).style('background-color', 'lightblue');
+         });
+ });
